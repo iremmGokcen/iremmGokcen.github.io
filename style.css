@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Padding ve border, element boyutlarına dahil edilir */
+    max-width: 100%; /* Hiçbir element genişliğin dışına çıkamaz */
+    overflow: hidden; /* Taşmaları gizler */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: url(/images/background.jpg) no-repeat center center/cover; /* Arka plan resmi */
+    color: #eae0e0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* HEADER (MENÜ) STİLİ */
+header {
+    width: 100%;
+    background: #333;
+    padding: 10px 0;
+    position: sticky;
+    top: 0; /* Yukarıda sabit dursun */
+    z-index: 1000;
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content:first baseline; /* Menü ortalansın */
+    flex-wrap: nowrap;
+}
+header nav ul li {
+    margin: 0 15px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffffaa;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background 0.3s ease-in-out;
+}
+header nav ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+} 
+/* FORM STİLİ */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    position: relative;
+}
+.formContainer {
+    background-color: rgba(87, 79, 79, 0.8); /* Transparan beyaz */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    max-width: 600px;
+}
+/* FORM ELEMANLARI */
+.formGroup {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 36px;
+}
+.inline-group {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.inline-group .group {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Label ve input’u alt alta hizalar */
+
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 20%;
+    font-size: 12px;
+}
+
+.subLabel{
+    width: 100%;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.radio-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.radio-group input{
+    width: 12px;
+    margin-right: 2%;
+}
+
+#radioInputs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3%;
+}
+
+button {
+    width: 40%;
+    background: #11cbcbd5;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+button:hover {
+    background: #11cbcbd5;
+}
+/* TELEFON NUMARASI GRUBU */
+.phoneGroup {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.phoneGroup #area, 
+.phoneGroup #phone {
+    flex: 1;
+}
+/* REKLAM (ASIDE) STİLLERİ */
+
+
+/* Reklam alanlarını düzenle */
+.ad-left,
+.ad-right {
+    position: fixed; /* Ekranda sabit pozisyonda kalsın */
+    top: 20%; /* Ekranın üstünden biraz aşağıda olsun */
+    width: 120px; /* Reklam genişliği */
+    z-index: 100; /* Reklamlar diğer içeriklerin üstünde olsun */
+}
+
+/* Sol reklam */
+.ad-left {
+    left: 0; /* Sol tarafa sabitle */
+}
+
+/* Sağ reklam */
+.ad-right {
+    right: 0; /* Sağ tarafa sabitle */
+}
+
+/* Reklam içindeki img düzeni */
+.ad-left img,
+.ad-right img {
+    width: 100%; /* Reklam alanına tam otursun */
+    height: auto; /* Görüntü orantısını korusun */
+    border-radius: 8px; /* Kenarları yuvarlak yap (isteğe bağlı) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge (isteğe bağlı) */
+}
+
+/* Reklam kapanma butonu */
+.close-ad {
+    position: absolute;
+    top: 5px;
+    right: 5px; /* Sağ üst köşeye konumlandır */
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    z-index: 101; /* Diğer öğelerin üstünde olsun */
+    border: none; /* Butonun kenarını kaldır */
+}
+.close-ad:hover {
+    background-color: rgb(149, 142, 142); /* Üzerine gelince arka plan kırmızı */
+}
+
+#submitMessage{
+    margin-top: 10%;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 8%;
+    background-color: rgba(87, 79, 79, 0.8);
+}
+
+
+
+
+/* RESPONSIVE TASARIM */
+@media (max-width: 768px) {
+ 
+    .radio-group p{
+        font-size: 14px;
+    }
+
+    header nav ul {
+        
+        align-items: center;
+    }
+
+    header nav ul li{
+        margin: 0 5px;
+    }
+
+    .formContainer {
+        width: 70%; 
+    }
+    .formGroup{
+        gap: 18px;
+    }
+
+    .ad-left, .ad-right {
+        display: none; /* Küçük ekranlarda reklamlar gizlenir */
+    }
+
+    input, select, button{
+        padding: 6px;
+    }
+    #areaCode{
+        padding: 5px;
+    }
+
+    .phoneGroup label{
+        width: 15%;
+    }
+
+    .phoneGroup .subLabel{
+        width: 100%;
+    }
+}
