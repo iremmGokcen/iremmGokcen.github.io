@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <ul>
+                
+                <li><a href= ''> Home </a></li>
+                <li><a href= 'categories.html'> Categories </a></li>
+                <li><a href= 'about.html'> About </a></li>
+                <li><a href= 'contact.html'> Contact </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="formContainer">
+            <form id="registrationForm">
+                <div class="formGroup">
+                    <label for="name">Name</label>
+                    <div id="name" class="inline-group">
+                        <div class="group">
+                            
+                            <input type="text" id="firsName" name="firsName" required>
+                            <label class="subLabel" for="firsName">First Name</label>
+                        </div>
+                        <div class="group">
+                            
+                            <input type="text" id="lastName" name="lastName" required>
+                            <label class="subLabel" for="lastName">Last Name</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formGroup">
+                    <label for="company">Company</label>
+                    <select id="company" name="company" required>
+                        <option value=""></option>
+                    </select>
+                </div>
+
+                <div class="formGroup">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                
+                <div class="formGroup phoneGroup">
+                    <label for="phone">Phone</label>
+                    <div id="phone" class="inline-group">
+                        <div class="group"> 
+                            <select id="areaCode" name="areaCode" required><option value=""></option></select>
+                            <label class="subLabel" for="areaCode">Area Code</label>
+                        </div>
+                        <div class="group">
+                            <input type="tel" id="phoneNumber" maxlength="7" pattern="\d{7}" required>
+                            <label class="subLabel" for="phoneNumber">Phone Number</label>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="formGroup">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">..Choose option...</option>
+                         
+                    </select>
+                </div>
+                
+                <div class="formGroup">
+                    <div class="radio-group">
+                        <p>Are you beginner?</p>
+                        <div id="radioInputs">
+                            <input type="radio" id="beginnerYes" name="beginner" value="yes" required>
+                            <label for="beginnerYes">Yes</label>
+
+                            <input type="radio" id="beginnerNo" name="beginner" value="no" required>
+                            <label for="beginnerNo">No</label>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+        <aside class="ad-left">
+            <a href="https://www.nike.com" target="_blank">
+                <img src="images/advertisement.jpg" alt="Ad Left" />
+            </a>
+            <button class="close-ad">×</button>
+        </aside>
+        <aside class="ad-right">
+            <a href="https://www.nike.com" target="_blank">
+                <img src="images/advertisement.jpg" alt="Ad Right" />
+            </a>
+            <button class="close-ad">×</button>
+        </aside>
+    </main>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
